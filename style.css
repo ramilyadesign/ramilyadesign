@@ -1,0 +1,680 @@
+
+
+/* =================================
+   PREMIUM CREATIVE PORTFOLIO
+   ================================= */
+
+:root {
+  --bg: #f4f1eb;
+  --surface: #ebe7df;
+  --text: #20201e;
+  --muted: #77746e;
+  --line: #d8d3ca;
+  --accent: #a45c43;
+  --white: #ffffff;
+
+  --page-padding: clamp(22px, 6vw, 96px);
+  --section-space: clamp(76px, 11vw, 150px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--text);
+  color: var(--bg);
+}
+
+/* =================================
+   HEADER
+   ================================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+
+  padding: 26px var(--page-padding);
+
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(18px, 3vw, 42px);
+}
+
+nav a {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  transition: color 0.25s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* =================================
+   HERO
+   ================================= */
+
+.hero {
+  max-width: 1500px;
+  padding: clamp(100px, 15vw, 210px)
+    var(--page-padding)
+    var(--section-space);
+}
+
+.eyebrow {
+  margin: 0 0 32px;
+
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 1050px;
+  margin: 0;
+
+  font-size: clamp(48px, 8.5vw, 116px);
+  font-weight: 400;
+  line-height: 0.99;
+  letter-spacing: -0.075em;
+}
+
+.description {
+  max-width: 510px;
+  margin: 36px 0 32px;
+
+  color: var(--muted);
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.9;
+}
+
+/* Главная кнопка */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 15px 22px;
+
+  background: var(--text);
+  color: var(--bg);
+
+  border: 1px solid var(--text);
+  border-radius: 0;
+
+  font-size: 11px;
+  letter-spacing: 0.5px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.button:hover {
+  background: transparent;
+  color: var(--text);
+}
+
+/* =================================
+   SECTIONS
+   ================================= */
+
+.section {
+  padding: var(--section-space) var(--page-padding);
+  border-top: 1px solid var(--line);
+}
+
+.section h2 {
+  max-width: 850px;
+  margin: 0 0 22px;
+
+  font-size: clamp(34px, 5vw, 64px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.055em;
+}
+
+.section > p {
+  max-width: 740px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.section-description {
+  margin: 18px 0 48px;
+}
+
+/* =================================
+   PROJECT GRID
+   ================================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+
+  margin-top: 48px;
+
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+/* Карточки проектов */
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+  min-height: 290px;
+  padding: clamp(24px, 3.5vw, 48px);
+
+  background: var(--bg);
+  border: none;
+  border-radius: 0;
+
+  transition: background 0.3s ease;
+}
+
+.project:hover {
+  background: var(--surface);
+  transform: none;
+}
+
+.project-number {
+  color: var(--accent);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 1.7;
+}
+
+.project h3 {
+  margin: 38px 0 14px;
+
+  font-size: clamp(23px, 3vw, 36px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -1.2px;
+}
+
+.project p {
+  max-width: 440px;
+  margin: 0 0 32px;
+
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* Ссылка на проект */
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: auto;
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid var(--line);
+
+  font-size: 11px;
+  letter-spacing: 0.3px;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.project-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* =================================
+   CONTACTS
+   ================================= */
+
+#contacts {
+  padding-top: clamp(100px, 15vw, 190px);
+  padding-bottom: clamp(100px, 15vw, 190px);
+}
+
+#contacts h2 {
+  max-width: 800px;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+
+  margin-top: 24px;
+  padding-bottom: 7px;
+
+  border-bottom: 1px solid var(--text);
+
+  font-size: 13px;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.contact-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* =================================
+   FOOTER
+   ================================= */
+
+footer {
+  padding: 28px var(--page-padding);
+
+  border-top: 1px solid var(--line);
+
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.3px;
+}
+
+/* =================================
+   RESPONSIVE
+   ================================= */
+
+@media (min-width: 1400px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  :root {
+    --section-space: 82px;
+  }
+
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  nav {
+    gap: 22px;
+  }
+
+  .hero {
+    padding-top: 105px;
+  }
+
+  h1 {
+    font-size: clamp(45px, 12vw, 72px);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    margin-top: 32px;
+  }
+
+  .project {
+    min-height: 250px;
+    padding: 30px 24px;
+  }
+
+  .project h3 {
+    margin-top: 30px;
+  }
+}
+
+/* Учитываем системные настройки анимации */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.arrow {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+  color: inherit;
+  line-height: 1;
+  vertical-align: baseline;
+}
+
+
+/* ==============================
+   SERVICES SECTION
+   ============================== */
+
+.services-section {
+  padding: clamp(70px, 9vw, 130px) var(--page-padding);
+}
+
+.services-title {
+  margin: 0 0 42px;
+
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 1.1;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  border: 1px solid var(--line);
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+  min-height: 315px;
+  padding: clamp(22px, 2.5vw, 44px);
+
+  border-right: 1px solid var(--line);
+  background: transparent;
+
+  transition: background 0.3s ease;
+}
+
+.service-card:last-child {
+  border-right: none;
+}
+
+.service-card:hover {
+  background: var(--surface);
+}
+
+.service-category {
+  color: var(--accent);
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+.service-card h3 {
+  margin: 20px 0 30px;
+
+  font-size: clamp(23px, 2.2vw, 34px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: auto;
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid var(--text);
+
+  font-size: 13px;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.service-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.arrow {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+/* Адаптация услуг для мобильных устройств */
+
+@media (max-width: 800px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    min-height: 240px;
+    padding: 30px 24px;
+
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .service-card:last-child {
+    border-bottom: none;
+  }
+
+  .service-card h3 {
+    max-width: 450px;
+  }
+}
+
+
+/* =================================
+   SERVICE DETAIL PAGES
+   ================================= */
+
+.detail-intro {
+  padding: 50px var(--page-padding) 34px;
+  border-bottom: 1px solid var(--line);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 40px;
+
+  color: var(--muted);
+  font-size: 12px;
+
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.detail-intro h1 {
+  max-width: 1100px;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.1;
+  letter-spacing: -0.055em;
+}
+
+.detail-subtitle {
+  max-width: 700px;
+  margin: 18px 0 0;
+
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Отдельный проект на странице услуги */
+
+.detail-project {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(30px, 5vw, 80px);
+
+  padding: 42px var(--page-padding) 48px;
+  border-bottom: 1px solid var(--line);
+}
+
+.detail-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.detail-copy h2 {
+  margin: 8px 0 14px;
+
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.035em;
+}
+
+.detail-copy > p {
+  max-width: 470px;
+  margin: 0 0 18px;
+
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.detail-copy .detail-result {
+  margin-top: auto;
+  padding-top: 32px;
+  padding-bottom: 18px;
+
+  color: var(--accent);
+  font-size: 11px;
+}
+
+.detail-copy .project-link {
+  margin-top: 0;
+}
+
+/* Галерея проекта */
+
+.detail-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(100px, 0.9fr);
+  gap: 12px;
+  align-content: start;
+}
+
+.image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 210px;
+  aspect-ratio: 1.35 / 1;
+
+  padding: 16px;
+  background: #dedbd5;
+  color: #77746e;
+
+  text-align: center;
+  font-size: 11px;
+}
+
+.image-placeholder.image-tall {
+  aspect-ratio: 0.72 / 1;
+}
+
+/* Адаптация под планшеты и телефоны */
+
+@media (max-width: 800px) {
+  .detail-intro {
+    padding-top: 34px;
+  }
+
+  .back-link {
+    margin-bottom: 30px;
+  }
+
+  .detail-project {
+    grid-template-columns: 1fr;
+    gap: 28px;
+
+    padding-top: 34px;
+    padding-bottom: 38px;
+  }
+
+  .detail-copy .detail-result {
+    margin-top: 0;
+    padding-top: 12px;
+  }
+
+  .detail-gallery {
+    grid-template-columns: minmax(0, 1.7fr) minmax(90px, 0.8fr);
+  }
+
+  .image-placeholder {
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 420px) {
+  .detail-gallery {
+    gap: 8px;
+    grid-template-columns: minmax(0, 1.5fr) minmax(80px, 0.8fr);
+  }
+
+  .image-placeholder {
+    padding: 8px;
+    font-size: 10px;
+  }
+}
+.portfolio-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  object-fit: cover;
+}
